@@ -6963,12 +6963,12 @@ angular.module('mm.core')
             return countries;
         };
         self.getDocsUrl = function(release, page) {
-            page = page || 'Mobile_app';
-            var docsurl = 'https://docs.moodle.org/en/' + page;
+            page = page || 'mulms';
+            var docsurl = 'https://mu.my/en/' + page;
             if (typeof release != 'undefined') {
                 var version = release.substr(0, 3).replace(".", "");
                 if (parseInt(version) >= 24) {
-                    docsurl = docsurl.replace('https://docs.moodle.org/', 'https://docs.moodle.org/' + version + '/');
+                    docsurl = docsurl.replace('https://mu.my/en/', 'https://mu.my/en/' + version + '/');
                 }
             }
             return $mmLang.getCurrentLanguage().then(function(lang) {
